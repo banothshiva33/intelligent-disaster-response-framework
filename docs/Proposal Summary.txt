@@ -1,0 +1,190 @@
+Proposal Summary – Major Project Presentation
+1. Introduction
+Good morning, ma'am.
+Our project title is:
+"An Intelligent Disaster Response Framework with Multi-Source Incident Verification and Machine Learning-Based Volunteer Allocation."
+The main objective of our project is to improve disaster response by ensuring that emergency resources are allocated only to genuine disaster incidents while automatically assigning the most suitable volunteers using machine learning and multi-criteria decision making.
+2. Existing Base Paper
+Our base paper is:
+"An Intelligent Disaster Management System: Integrating Technology for Effective Response and Recovery"
+Published in:
+IEEE ISACC 2025
+The base paper mainly focuses on:
+Disaster Reporting
+GIS Monitoring
+Resource Management
+Communication between stakeholders
+Disaster information management
+It provides a good disaster management platform but still has several practical limitations.
+3. Limitations of the Existing System
+After studying the IEEE paper, we identified the following limitations.
+Limitation 1
+The system assumes every disaster report submitted by users is genuine.
+There is no mechanism to verify whether a disaster actually occurred before allocating emergency resources.
+This may result in:
+Fake reports
+Resource wastage
+Delayed response to real disasters
+Limitation 2
+There is no intelligent volunteer allocation mechanism.
+The system does not determine which volunteer is most suitable for a disaster.
+Limitation 3
+Volunteer skills are not considered.
+For example,
+If a flood requires rescue volunteers,
+the system may assign medical volunteers instead.
+Limitation 4
+Volunteer distance is ignored.
+A volunteer located 40 km away may be selected while another volunteer only 2 km away remains unused.
+Limitation 5
+Volunteer availability is not considered.
+Busy volunteers may still receive assignments.
+Limitation 6
+The existing paper does not use Machine Learning to estimate disaster severity and required resources.
+4. Our Proposed Solution
+To overcome these limitations, we propose three major contributions.
+Contribution 1
+Multi-Source Disaster Verification Framework (MDVF)
+This is our primary research contribution.
+Before assigning volunteers, every disaster report must first be verified.
+Step 1
+Evidence Validation
+Every user must upload:
+Image
+or
+Video
+Evidence is mandatory.
+Without evidence, the report cannot be submitted.
+Step 2
+Multi-Source Verification
+The report is sent simultaneously to:
+Existing Platform Users
+Nearby Local Users
+Nearby Registered Volunteers
+Each can respond with:
+Confirm
+Reject
+Unable to Verify
+Step 3
+Strong Confirmation Rule
+If strong confirmation is received from any one trusted verification source,
+the report is immediately marked as:
+Verified
+Volunteer allocation starts immediately.
+We don't wait for all three confirmations because disaster response should be fast.
+Step 4
+Verification Call
+If nobody confirms,
+the system initiates a verification request.
+An emergency coordinator contacts the reporting user,
+collects additional information,
+and then approves or rejects the report.
+Step 5
+False Report Handling
+If the report is intentionally false,
+the system:
+Flags the account
+Reduces the trust score
+Stores complete audit logs
+Trust score is only a secondary factor.
+Contribution 2
+Machine Learning-Based Disaster Severity Classification
+After the report is verified,
+our Machine Learning model predicts:
+Disaster Severity
+Priority Level
+Required Volunteer Skills
+Estimated Volunteer Count
+Algorithms
+We will compare:
+Random Forest
+XGBoost
+The model with the highest accuracy will be selected.
+Contribution 3
+Smart Volunteer Allocation Engine
+After severity prediction,
+the system ranks volunteers automatically.
+Volunteer Score is calculated as:
+Skill Match × 50%
+Distance × 30%
+Availability × 20%
+The volunteer with the highest score receives the highest priority.
+5. Workflow
+Our complete workflow is:
+Citizen Reports Disaster
+↓
+Evidence Validation
+↓
+Multi-Source Disaster Verification
+↓
+Strong Confirmation
+↓
+Machine Learning Severity Prediction
+↓
+Volunteer Ranking
+↓
+Firebase Notification
+↓
+Volunteer Response
+↓
+Administrator Dashboard
+6. Datasets
+For Machine Learning, we will use publicly available disaster datasets.
+Possible sources include:
+EM-DAT International Disaster Database
+NDMA Disaster Records
+Kaggle Disaster Datasets
+For volunteer allocation,
+we will create a structured volunteer dataset containing:
+Skills
+Current Location
+Availability Status
+7. Technologies Used
+Frontend
+React.js
+HTML
+CSS
+JavaScript
+Leaflet.js
+Backend
+Node.js
+Express.js
+Machine Learning
+Python
+Scikit-Learn
+Random Forest
+XGBoost
+Database
+MongoDB Atlas
+Notifications
+Firebase Cloud Messaging
+Deployment
+Render
+8. Evaluation
+We will compare our framework with:
+Random Volunteer Allocation
+Skill-Based Allocation
+Distance-Based Allocation
+Existing IEEE Base Paper
+Evaluation Metrics:
+Verification Accuracy
+Severity Prediction Accuracy
+Response Time
+Volunteer Allocation Accuracy
+Volunteer Utilization Rate
+9. Expected Outcome
+Our framework will:
+Verify disaster reports before allocating resources.
+Reduce fake disaster reporting.
+Improve disaster verification accuracy.
+Reduce emergency response time.
+Allocate the right volunteers to the right disasters.
+Improve volunteer utilization.
+Provide a scalable disaster response framework suitable for government agencies and NGOs.
+10. Conclusion
+The existing IEEE paper provides a disaster management platform but lacks disaster authenticity verification and intelligent volunteer allocation.
+Our proposed framework addresses these limitations through:
+Multi-Source Disaster Verification Framework (MDVF)
+Machine Learning-Based Severity Classification
+Smart Volunteer Allocation Engine
+Together, these enhancements make disaster response more reliable, faster, and more efficient, while reducing false reports and improving the utilization of emergency volunteers.

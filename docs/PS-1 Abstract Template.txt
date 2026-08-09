@@ -1,0 +1,29 @@
+An Intelligent Disaster Response Framework with Multi-Source Incident Verification and Machine Learning-Based Volunteer Allocation
+Abstract: Abstract:
+Natural disasters require rapid and reliable emergency response to minimize the loss of lives and property. Existing disaster management systems focus on disaster reporting and resource management but lack mechanisms to verify the authenticity of disaster reports and intelligently allocate volunteers. This project proposes An Intelligent Disaster Response Framework with Multi-Source Incident Verification and Machine Learning-Based Volunteer Allocation. The framework introduces a Multi-Source Disaster Verification Framework (MDVF) that validates disaster reports using mandatory evidence, existing user confirmation, nearby local user confirmation, and nearby volunteer confirmation. Verified incidents are analyzed using machine learning models (Random Forest and XGBoost) to predict disaster severity and resource requirements. A Smart Volunteer Allocation Engine then ranks volunteers based on Skill Match (50%), Distance (30%), and Availability (20%) to ensure efficient deployment. The proposed system aims to reduce false disaster reporting, improve verification accuracy, optimize volunteer utilization, and minimize emergency response time through intelligent and scalable disaster management.
+Keywords:
+Disaster Management, Machine Learning, Volunteer Allocation, Incident Verification, GIS.
+Team No:04
+Domain of the Project: Artificial Intelligence & Machine Learning (AI & ML)
+Team Members:
+S. No.
+Roll No
+Student Name                                   
+ Phone no 
+1.
+24BD5A0543
+Banoth Shiva
+8522062160
+2.
+24BD5A0544
+G Mahipal
+9390772086
+3.
+24BD5A0546
+Madiha Fathima
+6302362220
+4.
+24BD5A0547
+P Srihitha
+8328138069
+Faculty SupervisorProject Coordinator
