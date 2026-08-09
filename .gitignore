@@ -1,0 +1,385 @@
+# ==========================================================
+# Intelligent Disaster Response Framework
+# Global .gitignore
+# React/Vite + Spring Boot/Maven + Python AI/ML
+# ==========================================================
+
+
+# ==========================================================
+# OPERATING SYSTEM FILES
+# ==========================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+
+# ==========================================================
+# IDE / EDITOR
+# ==========================================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# JetBrains
+*.iws
+
+# Temporary editor files
+*.swp
+*.swo
+*.swn
+
+
+# ==========================================================
+# ENVIRONMENT / SECRETS
+# ==========================================================
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local configuration
+*.local
+
+# Certificates / private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Secrets
+secrets/
+secret/
+credentials/
+credentials.json
+
+
+# ==========================================================
+# FRONTEND - REACT / VITE / NODE
+# ==========================================================
+
+# Node dependencies
+frontend/node_modules/
+node_modules/
+
+# Build output
+frontend/dist/
+frontend/build/
+
+# Vite
+frontend/.vite/
+
+# React / other build caches
+frontend/.cache/
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package manager caches
+.npm/
+.yarn/
+.pnpm-store/
+
+# Coverage
+frontend/coverage/
+
+# Optional local environment files
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+
+# ==========================================================
+# BACKEND - JAVA / SPRING BOOT / MAVEN
+# ==========================================================
+
+# Maven build output
+backend/target/
+
+# Maven wrapper generated files - DO NOT ignore these
+# mvnw
+# mvnw.cmd
+# .mvn/wrapper/maven-wrapper.properties
+
+# Java compiled files
+*.class
+
+# Java archives
+*.jar
+*.war
+*.ear
+
+# Spring Boot generated files
+backend/logs/
+backend/*.log
+
+# General Java build directories
+bin/
+build/
+out/
+
+# Gradle, in case used later
+.gradle/
+backend/.gradle/
+
+# Maven logs
+backend/target/
+
+
+# ==========================================================
+# PYTHON - AI / ML
+# ==========================================================
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python compiled extensions
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python environment files
+.python-version
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Wheel
+*.whl
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# MyPy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Python logs
+*.log
+
+# Local ML environment
+ai-ml/.env
+ai-ml/.env.*
+!ai-ml/.env.example
+
+
+# ==========================================================
+# AI / ML GENERATED FILES
+# ==========================================================
+
+# Trained model files
+# Uncomment if models are large and stored outside Git
+# ai-ml/models/*.pkl
+# ai-ml/models/*.joblib
+# ai-ml/models/*.h5
+# ai-ml/models/*.pt
+# ai-ml/models/*.pth
+# ai-ml/models/*.onnx
+
+# ML experiment outputs
+ai-ml/runs/
+ai-ml/mlruns/
+ai-ml/wandb/
+
+# Generated predictions / outputs
+ai-ml/outputs/
+
+# Temporary training files
+ai-ml/tmp/
+
+
+# ==========================================================
+# DATASETS
+# ==========================================================
+
+# IMPORTANT:
+# Do not commit large datasets to Git.
+#
+# Uncomment these if datasets will be stored locally:
+#
+# ai-ml/data/raw/
+# ai-ml/data/processed/
+# ai-ml/data/external/
+
+
+# ==========================================================
+# DATABASE / LOCAL DEVELOPMENT
+# ==========================================================
+
+# SQLite databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Local database dumps
+*.sql.gz
+*.dump
+
+# Local database directories
+database/data/
+db/data/
+
+
+# ==========================================================
+# LOG FILES
+# ==========================================================
+
+*.log
+logs/
+log/
+
+
+# ==========================================================
+# TEMPORARY FILES
+# ==========================================================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Temporary folders
+tmp/
+temp/
+
+
+# ==========================================================
+# GENERATED DOCUMENTS / FILES
+# ==========================================================
+
+# Uncomment if these are generated automatically
+# generated/
+# reports/generated/
+
+
+# ==========================================================
+# DOCKER
+# ==========================================================
+
+# Docker local environment
+docker/.env
+docker-compose.override.yml
+
+
+# ==========================================================
+# TEST OUTPUT
+# ==========================================================
+
+test-results/
+playwright-report/
+blob-report/
+.nyc_output/
+
+
+# ==========================================================
+# COVERAGE
+# ==========================================================
+
+coverage/
+*.lcov
+
+
+# ==========================================================
+# LOCAL DEVELOPMENT FILES
+# ==========================================================
+
+.local/
+.local-env/
+.cache/
+
+
+# ==========================================================
+# PROJECT-SPECIFIC LOCAL FILES
+# ==========================================================
+
+# Local uploads
+uploads/
+
+# Local generated files
+generated/
+
+# Runtime files
+*.pid
+*.pid.lock
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
