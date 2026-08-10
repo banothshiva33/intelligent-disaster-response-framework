@@ -6,6 +6,9 @@ import { Footer } from './Footer';
 
 export const AppLayout: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(() => {
+    return localStorage.getItem('sidebar-collapsed') === 'true';
+  });
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -15,17 +18,30 @@ export const AppLayout: React.FC = () => {
     setSidebarOpen(false);
   };
 
+  const toggleCollapse = () => {
+    setIsCollapsed(prev => {
+      const next = !prev;
+      localStorage.setItem('sidebar-collapsed', String(next));
+      return next;
+    });
+  };
+
   return (
-    <div className="flex flex-col h-screen w-screen overflow-hidden bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100">
+    <div className="flex flex-col h-screen w-screen overflow-hidden bg-white text-slate-900">
       {/* Header occupies the full width of the screen */}
       <Header onToggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
 
       {/* Main container split between sidebar and central scroll content */}
-      <div className="flex flex-1 overflow-hidden relative">
-        <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
+      <div className="flex flex-1 overflow-hidden relative bg-white">
+        <Sidebar 
+          isOpen={sidebarOpen} 
+          onClose={closeSidebar} 
+          isCollapsed={isCollapsed} 
+          onToggleCollapse={toggleCollapse} 
+        />
 
-        <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
-          <main className="flex-grow p-4 md:p-6 lg:p-8">
+        <div className="flex-1 flex flex-col min-w-0 overflow-y-auto bg-white">
+          <main className="flex-grow p-4 md:p-6 lg:p-8 bg-white">
             <Outlet />
           </main>
           <Footer />
@@ -34,3 +50,4 @@ export const AppLayout: React.FC = () => {
     </div>
   );
 };
+export default AppLayout;
