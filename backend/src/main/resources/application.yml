@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: raava-backend
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/raava}
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  port: ${PORT:8080}
+
+jwt:
+  # Development fallback only. Set JWT_SECRET to a unique random value in every deployed environment.
+  secret: ${JWT_SECRET:local-development-only-jwt-secret-change-this-value-please}
+  expiration-ms: ${JWT_EXPIRATION_MS:604800000}
+
+ml:
+  service:
+    url: ${ML_SERVICE_URL:http://localhost:8000}
+
+logging:
+  level:
+    org.springframework.security: INFO
+    com.raava: INFO
